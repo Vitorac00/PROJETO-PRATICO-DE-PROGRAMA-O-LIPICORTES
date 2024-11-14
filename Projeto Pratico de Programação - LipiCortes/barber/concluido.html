@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamento de Corte de Cabelo</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Organiza os elementos em uma coluna */
+            justify-content: center; /* Alinha os itens verticalmente ao centro */
+            align-items: center; /* Alinha os itens horizontalmente ao centro */
+            height: 100vh; /* Faz o body ocupar toda a altura da tela */
+            margin: 0; /* Remove a margem padrão */
+            font-family: Arial, sans-serif; /* Define uma fonte padrão */
+
+            background-image: url('img1.jpg'); /* Imagem de fundo */
+            background-size: cover; /* Faz a imagem cobrir todo o fundo */
+            background-position: center; /* Centraliza a imagem */
+            color: #e0e0e0; /* Cor do texto em um tom de branco escuro */
+            text-align: center; /* Alinha o texto no centro */
+        }
+
+        h2 {
+            margin-bottom: 30px; /* Espaço abaixo do título */
+        }
+
+        /* Estilo para o botão */
+        .voltar-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Cor de fundo do botão */
+            color: white; /* Cor do texto do botão */
+            border: none; /* Remove a borda */
+            border-radius: 5px; /* Bordas arredondadas */
+            cursor: pointer; /* Aponta o cursor para indicar que é clicável */
+            font-size: 16px;
+        }
+
+        .voltar-btn:hover {
+            background-color: #45a049; /* Cor do botão ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <h2>Agendamento concluído</h2>
+    <!-- O formulário pode ser adicionado aqui se necessário -->
+    <form action="http://127.0.0.1:5500/index.html" method="GET">
+    </form>
+    
+    <!-- Botão para voltar à página inicial -->
+    <button class="voltar-btn" onclick="window.location.href='index.html';">Voltar à Página Inicial</button>
+</body>
+</html>
+

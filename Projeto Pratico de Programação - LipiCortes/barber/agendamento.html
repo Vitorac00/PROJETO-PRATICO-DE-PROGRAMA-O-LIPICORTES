@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamento de Corte de Cabelo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Faz o body ocupar toda a altura da tela */
+            margin: 0; /* Remove a margem padrão */
+            font-family: Arial, sans-serif; /* Define uma fonte padrão */
+
+            background-image: url('img1.jpg'); /* Imagem de fundo */
+            background-size: cover; /* Faz a imagem cobrir todo o fundo */
+            background-position: center; /* Centraliza a imagem */
+            color: #e0e0e0; /* Cor do texto em um tom de branco escuro */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between; /* Divide o espaço entre o título e o formulário */
+            align-items: center; /* Centraliza verticalmente os itens */
+            width: 80%; /* Largura do contêiner geral */
+            max-width: 1200px; /* Limita a largura máxima */
+        }
+
+        .texto-container {
+            flex: 1; /* O texto ocupa o restante do espaço */
+            text-align: left; /* Alinha o texto à esquerda */
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        form {
+            border: 1px solid #ccc; /* Adiciona uma borda ao formulário */
+            padding: 25px; /* Espaçamento interno */
+            border-radius: 8px; /* Cantos arredondados */
+            box-shadow: 0 2px 10px rgb(25, 6, 240); /* Sombra para efeito de profundidade */
+            background-color: #ffffff; /* Cor de fundo do formulário */
+            width: 300px; /* Largura fixa do formulário */
+        }
+
+        label {
+            display: block; /* Faz os labels ocuparem toda a largura */
+            margin-bottom: 5px; /* Espaço entre label e input */
+            color: #333;
+        }
+
+        input, select, textarea, button {
+            width: 100%; /* Faz os campos ocuparem toda a largura do formulário */
+            margin-bottom: 15px; /* Espaço entre os campos */
+            padding: 10px; /* Espaçamento interno */
+            border: 1px solid #ccc; /* Borda dos campos */
+            border-radius: 4px; /* Cantos arredondados */
+        }
+
+        button {
+            background-color: #2611df; /* Cor de fundo do botão */
+            color: white; /* Cor do texto do botão */
+            cursor: pointer; /* Muda o cursor ao passar o mouse */
+        }
+
+        button:hover {
+            background-color: #0e046c; /* Cor do botão ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="texto-container">
+            <h2>Agendar Corte de Cabelo</h2>
+        </div>
+        <form action="http://127.0.0.1:5500/concluido.html" method="GET">
+            <label for="cliente_nome">Nome do Cliente:</label>
+            <input type="text" id="cliente_nome" name="cliente_nome" required>
+
+            <label for="cliente_telefone">Telefone:</label>
+            <input type="text" id="cliente_telefone" name="cliente_telefone">
+
+            <label for="cliente_email">Email:</label>
+            <input type="email" id="cliente_email" name="cliente_email">
+
+            <label for="barbeiro">Selecione o Barbeiro:</label>
+            <select id="barbeiro" name="barbeiro">
+                <!-- Lista de barbeiros será carregada do banco de dados -->
+                <option value="filipe">Filipe</option>
+                <option value="vitor">Vitor</option>
+                <option value="weverlen">Weverlen</option>
+            </select>
+
+            <label for="servico">Selecione o Serviço:</label>
+            <select id="servico" name="servico">
+                <!-- Lista de serviços será carregada do banco de dados -->
+                <option value="corte">Corte R$25,00</option>
+                <option value="corte_barba">Corte e Barba Desenhada R$30,00</option>
+                <option value="pezinho">Pezinho R$15,00</option>
+            </select>
+
+            <label for="data_hora">Data e Hora:</label>
+            <input type="datetime-local" id="data_hora" name="data_hora" required>
+
+            <label for="observacoes">Observações:</label>
+            <textarea id="observacoes" name="observacoes"></textarea>
+
+            <button type="submit">Agendar</button>
+        </form>
+    </div>
+</body>
+</html>
+
